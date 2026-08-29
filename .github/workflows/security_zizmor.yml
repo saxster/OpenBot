@@ -17,15 +17,6 @@ on:
       - ".github/workflows/**"
       - ".github/actions/**"
       - ".github/zizmor.yml"
-  pull_request:
-    paths:
-      - ".github/workflows/**"
-      - ".github/actions/**"
-      - ".github/zizmor.yml"
-  schedule:
-    # Catch findings introduced by newly-published advisories even in a week when no workflow changed.
-    - cron: "0 9 * * 1"
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
