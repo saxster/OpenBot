@@ -4,6 +4,8 @@ name: Create release PR
 # workflow only proposes: it writes the version and the notes and opens a pull request. Merging that
 # pull request is what publishes, so the release itself goes through review like anything else.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       bump:
